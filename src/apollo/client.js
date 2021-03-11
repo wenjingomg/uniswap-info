@@ -2,7 +2,7 @@ import { ApolloClient } from 'apollo-client'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { HttpLink } from 'apollo-link-http'
 
-const hostUrl = 'http://34.203.218.6:3100/';
+const hostUrl = 'http://34.203.218.6:8000/';
 
 export const client = new ApolloClient({
   link: new HttpLink({
