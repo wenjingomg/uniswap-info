@@ -28,6 +28,14 @@ export const v1Client = new ApolloClient({
   shouldBatch: true,
 })
 
+export const stakingClient = new ApolloClient({
+  link: new HttpLink({
+    uri: hostUrl +  'subgraphs/name/okboy/okswap',
+  }),
+  cache: new InMemoryCache(),
+  shouldBatch: true,
+})
+
 export const blockClient = new ApolloClient({
   link: new HttpLink({
     uri: hostUrl + 'subgraphs/name/okboy/okswap',
