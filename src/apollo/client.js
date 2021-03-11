@@ -6,7 +6,7 @@ const hostUrl = 'http://34.203.218.6:8000/';
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri: hostUrl + 'subgraphs/name/davekaj/uniswap',
+    uri: hostUrl + 'subgraphs/name/okboy/okswap',
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,
@@ -14,7 +14,7 @@ export const client = new ApolloClient({
 
 export const healthClient = new ApolloClient({
   link: new HttpLink({
-    uri: hostUrl +  'index-node/graphql',
+    uri: 'https://health.mdex.com/graphql',
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,
@@ -22,15 +22,7 @@ export const healthClient = new ApolloClient({
 
 export const v1Client = new ApolloClient({
   link: new HttpLink({
-    uri: hostUrl +  'subgraphs/name/davekaj/uniswap',
-  }),
-  cache: new InMemoryCache(),
-  shouldBatch: true,
-})
-
-export const stakingClient = new ApolloClient({
-  link: new HttpLink({
-    uri: hostUrl +  'subgraphs/name/way2rach/talisman',
+    uri: hostUrl +  'subgraphs/name/okboy/okswap',
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,
@@ -38,7 +30,7 @@ export const stakingClient = new ApolloClient({
 
 export const blockClient = new ApolloClient({
   link: new HttpLink({
-    uri: hostUrl + 'subgraphs/name/blocklytics/ethereum-blocks',
+    uri: hostUrl + 'subgraphs/name/okboy/okswap',
   }),
   cache: new InMemoryCache(),
 })
